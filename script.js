@@ -1,7 +1,8 @@
 const symbols = ["🍒", "🍋", "🍊", "🍉", "🍇", "🍓", "🔔", "💎"];
-let spinning = [false, false, false];
+let spinning = [true, true, true]; // 初期状態ではすべてのリールが回転していると仮定
 
 document.getElementById('spinButton').addEventListener('click', () => {
+    // スピンボタンをクリックするとすべてのリールを回転させる
     spinning.fill(true);
     spinReel(0);
     spinReel(1);
@@ -16,13 +17,14 @@ function spinReel(reel) {
     if (spinning[reel]) {
         const reelElement = document.getElementById('reel' + (reel + 1));
         reelElement.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-        setTimeout(() => spinReel(reel), 50);
+        setTimeout(() => spinReel(reel), 50); // 50ミリ秒ごとにシンボルを更新
     }
 }
 
 function stopReel(reel) {
     spinning[reel] = false;
 
+    // 全てのリールが停止したら結果をチェック
     if (spinning.every(val => val === false)) {
         checkWin();
     }
