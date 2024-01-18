@@ -11,16 +11,19 @@
     width: 50px;
 }
 
-#spinButton {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 20px;
+#reels {
+    margin-bottom: 10px;
+}
+
+/* 新しいスタイルを追加 */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .stopButton {
-    display: block;
-    margin: 10px auto;
+    margin: 0 5px;
     padding: 5px 10px;
     font-size: 16px;
 }
