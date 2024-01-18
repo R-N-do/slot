@@ -17,3 +17,10 @@
     padding: 10px 20px;
     font-size: 20px;
 }
+
+.stopButton {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 16px;
+}
