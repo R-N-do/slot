@@ -15,10 +15,16 @@
     margin-bottom: 10px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
 
 #spinButton {
     display: block;
-    margin: 20px auto;
+    margin: 5px auto;
     padding: 10px 20px;
     font-size: 20px;
 }
