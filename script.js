@@ -1,6 +1,17 @@
 const symbols = ["🍒", "🍋", "🍊", "🍉", "🍇", "🍓", "🔔", "💎"];
 let spinning = [false, false, false];
 
+document.getElementById('spinButton').addEventListener('click', () => {
+    spinning.fill(true);
+    spinReel(0);
+    spinReel(1);
+    spinReel(2);
+});
+
+document.getElementById('stopButton1').addEventListener('click', () => stopReel(0));
+document.getElementById('stopButton2').addEventListener('click', () => stopReel(1));
+document.getElementById('stopButton3').addEventListener('click', () => stopReel(2));
+
 function spinReel(reel) {
     if (spinning[reel]) {
         const reelElement = document.getElementById('reel' + (reel + 1));
@@ -8,10 +19,6 @@ function spinReel(reel) {
         setTimeout(() => spinReel(reel), 50);
     }
 }
-
-document.getElementById('stopButton1').addEventListener('click', () => stopReel(0));
-document.getElementById('stopButton2').addEventListener('click', () => stopReel(1));
-document.getElementById('stopButton3').addEventListener('click', () => stopReel(2));
 
 function stopReel(reel) {
     spinning[reel] = false;
@@ -33,9 +40,3 @@ function checkWin() {
         resultDiv.textContent = "残念、もう一度挑戦してください。";
     }
 }
-
-// スロットをスピンさせる
-spinning.fill(true);
-spinReel(0);
-spinReel(1);
-spinReel(2);
