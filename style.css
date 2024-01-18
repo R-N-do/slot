@@ -11,26 +11,16 @@
     width: 50px;
 }
 
-#reels {
-    margin-bottom: 10px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-
 #spinButton {
     display: block;
-    margin: 5px auto;
+    margin: 20px auto;
     padding: 10px 20px;
     font-size: 20px;
 }
 
 .stopButton {
-    margin: 0 2px; /* マージンを左右に2pxに設定 */
+    display: block;
+    margin: 10px auto;
     padding: 5px 10px;
     font-size: 16px;
 }
