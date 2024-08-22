@@ -37,8 +37,8 @@ function checkWin() {
     const resultDiv = document.getElementById('result');
 
     if (reel1 === reel2 && reel2 === reel3) {
-        resultDiv.textContent = "当たり！";
+      //  resultDiv.textContent = "当たり！";
     } else {
-        resultDiv.textContent = "残念、もう一度挑戦してください。";
+      //  resultDiv.textContent = "残念、もう一度挑戦してください。";
     }
 }
